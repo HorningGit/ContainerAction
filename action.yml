@@ -1,0 +1,14 @@
+name: 'my first container action'
+description: "A Cloud Guru'
+author: "Alexander Horning'
+inputs:
+  myInput:
+    description: 'Greeting!'
+    required: true
+    default: 'Awesome Guru'
+outputs:
+  myOutput:
+    description: 'total memory'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
