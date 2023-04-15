@@ -3,14 +3,15 @@ on: [push]
 jobs:
   my-job:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@master
-      - name: Run the Action
-        id: hello 
-        uses: ./
-        with:
-        myinput: "Alexander Horning'
-      - name: output
-          run: |
-            echo ${{ steps.hello.outputs.memory }}
-            echo "Total memory successfully output"
+    - uses: actions/checkout@v2
+    - name: run the action
+      id: hello
+      uses: ./       
+      with:
+        myInput: 'Alexander Horning'
+    - name: output
+      run: |
+        echo ${{ steps.hello.outputs.memory }}
+        echo "total memory successfully output"
